@@ -5,6 +5,7 @@
 #include "chronowire/analyzer.h"
 #include "chronowire/config.h"
 #include "chronowire/journal.h"
+#include "chronowire/schema.h"
 #include "chronowire/stream.h"
 
 extern "C" int LLVMFuzzerTestOneInput(const std::uint8_t* data, std::size_t size) {
@@ -15,7 +16,16 @@ extern "C" int LLVMFuzzerTestOneInput(const std::uint8_t* data, std::size_t size
   auto report = chronowire::analyzeBundle(data, size);
   if (report) {
     volatile std::size_t sink = report.value().section_count + report.value().config_entries +
-                                report.value().journal_records + report.value().stream_messages;
+                                report.value().journal_records + report.value().stream_messages +
+                                report.value().schema_config_keys;
+    (void)sink;
+  }
+
+  auto profile = chronowire::profileBundleBytes(data, size);
+  if (profile) {
+    auto valid = chronowire::validateProfile(profile.value());
+    volatile std::size_t sink = profile.value().diagnostics.size() +
+                                profile.value().keyspaces.size() + (valid ? 1u : 0u);
     (void)sink;
   }
 

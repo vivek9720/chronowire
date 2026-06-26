@@ -16,6 +16,7 @@ add_library(chronowire STATIC
   src/journal.cc
   src/reader.cc
   src/result.cc
+  src/schema.cc
   src/stream.cc
 )
 

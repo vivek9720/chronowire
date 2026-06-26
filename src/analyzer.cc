@@ -7,6 +7,7 @@
 #include "chronowire/config.h"
 #include "chronowire/journal.h"
 #include "chronowire/reader.h"
+#include "chronowire/schema.h"
 #include "chronowire/stream.h"
 
 namespace chronowire {
@@ -25,6 +26,15 @@ Result<AnalysisReport> analyzeBundle(const std::uint8_t* data, std::size_t size)
   AnalysisReport report;
   report.section_count = bundle.value().sections.size();
   report.aggregate_checksum = checksum32(data, size);
+
+  auto profile = buildSchemaProfile(bundle.value());
+  if (!profile) {
+    return Result<AnalysisReport>::failure(profile.error());
+  }
+  report.schema_diagnostics = profile.value().diagnostics.size();
+  report.schema_config_keys = profile.value().config_keys.size();
+  report.schema_keyspaces = profile.value().keyspaces.size();
+  report.schema_signature = profile.value().stable_signature;
 
   for (const auto& section : bundle.value().sections) {
     switch (section.type) {
@@ -97,6 +107,10 @@ std::string formatReport(const AnalysisReport& report) {
   out << "replay_rows=" << report.replay_rows << '\n';
   out << "stream_frames=" << report.stream_frames << '\n';
   out << "stream_messages=" << report.stream_messages << '\n';
+  out << "schema_diagnostics=" << report.schema_diagnostics << '\n';
+  out << "schema_config_keys=" << report.schema_config_keys << '\n';
+  out << "schema_keyspaces=" << report.schema_keyspaces << '\n';
+  out << "schema_signature=" << report.schema_signature << '\n';
   out << "aggregate_checksum=" << report.aggregate_checksum << '\n';
   if (!report.notes.empty()) {
     out << "notes=" << report.notes << '\n';

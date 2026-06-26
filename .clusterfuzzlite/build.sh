@@ -21,6 +21,7 @@ SOURCES=(
   "${ROOT}/src/journal.cc"
   "${ROOT}/src/reader.cc"
   "${ROOT}/src/result.cc"
+  "${ROOT}/src/schema.cc"
   "${ROOT}/src/stream.cc"
 )
 

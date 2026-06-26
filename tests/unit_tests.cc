@@ -8,6 +8,7 @@
 #include "chronowire/config.h"
 #include "chronowire/journal.h"
 #include "chronowire/reader.h"
+#include "chronowire/schema.h"
 #include "chronowire/stream.h"
 
 namespace {
@@ -101,6 +102,26 @@ void testBundleAnalysis() {
   assert(report.value().replay_rows == 2);
   assert(report.value().stream_frames == 2);
   assert(report.value().stream_messages == 1);
+  assert(report.value().schema_config_keys >= 4);
+  assert(report.value().schema_keyspaces == 1);
+  assert(report.value().schema_signature != 0);
+}
+
+void testSchemaProfile() {
+  const std::string text = completeBundle();
+  auto profile = chronowire::profileBundleBytes(
+      reinterpret_cast<const std::uint8_t*>(text.data()), text.size());
+  assert(profile);
+  assert(profile.value().sections.size() == 3);
+  assert(profile.value().keyspaces.count("user") == 1);
+  assert(profile.value().stream.reconstructed_messages == 1);
+  assert(profile.value().begin_records == 2);
+  assert(profile.value().commit_records == 1);
+  assert(profile.value().rollback_records == 1);
+  auto valid = chronowire::validateProfile(profile.value());
+  assert(valid);
+  const std::string formatted = chronowire::formatSchemaProfile(profile.value());
+  assert(formatted.find("schema_signature=") != std::string::npos);
 }
 
 }  // namespace
@@ -110,5 +131,6 @@ int main() {
   testJournalReplay();
   testStream();
   testBundleAnalysis();
+  testSchemaProfile();
   return 0;
 }
