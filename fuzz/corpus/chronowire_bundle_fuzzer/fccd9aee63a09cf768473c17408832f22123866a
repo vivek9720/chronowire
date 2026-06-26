@@ -1,0 +1,22 @@
+CWJ1-TEXT
+version 1
+meta p`roducer=seed
+meta schema=chronowire-demo
+section settings config
+include "…ase.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    maz_rows = 2048;
+    flush_interval = 15;
+  }
+}
+.
+section store journal
+JNL1
+pager 0 flags=0 data=hello-
+frame msg=77 segs=0 data=middle-
+.
+end

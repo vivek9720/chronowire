@@ -1,0 +1,17 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+section settings config
+pipeline {
+  input = "spool";
+  output = "archive";
+  retry = (1 CWJ1-TEXT
+ver3ioCWJ1-TEXT
+versin 1
+meta producer=son e1
+m 1
+put 1 accou link stream
+STR1
+frame msg=9 seq=0 total=1 flags=4 data=single-message
+.
+end

@@ -1,0 +1,23 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "…ase.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 3 *rollbackde = "offline";
+  limits {
+    max_rows = 2048;
+    flush_interval = 15
+begin 92
+erase 92 devike:beta
+rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flags=2 daŒ•=done
+framg msg=77 seq=1 total=3 flags=0 data=middle-
+.
+end

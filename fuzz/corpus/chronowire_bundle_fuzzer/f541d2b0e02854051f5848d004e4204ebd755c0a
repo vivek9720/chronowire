@@ -1,0 +1,18 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "base.cwc"è
+service {
+  name = "ingest";
+  workers 4 2 + 3 * 4;
+  mode = "offline";
+  limits {
+   ow
+str 0 id
+begin 91
+put 91 device:alpha status=readywo ner=ops
+put 91 device:beta -
+.
+end

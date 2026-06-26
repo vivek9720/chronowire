@@ -1,0 +1,4 @@
+include "base.cwc";
+service {
+  name = "coll-ctor";
+  33333333333333333333333333333333rt=p (1

@@ -1,0 +1,15 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+section settings config
+pipeline {
+  inpu0t = "spool";
+  output = "archive";
+  retry = (2 + 5555555555555555555555555555555555555555555555555555555555555555555555555555555555552) * 5;
+}
+.
+section store journal
+JNL1
+page 3 300 flush_interval  data=single-message
+.
+end

@@ -1,0 +1,20 @@
+inc = "metadata-onll/queue";
+  wo{kern= "mue";
+o{kern= "mue";
+  wo{kers = 2 + 2 * 3; }
+}
+s = 1 + 2 *13;
+  feat = 64;
+  }nc = "metadata-onll/queue";
+  wo{kern= "mue";
+o{kern= "mue";
+  wo{kers = 2 + 2;
+  feature_flags {
+    #ompressionerv * 3; }
+}
+s = 1 + 2 *13;
+  feat = 64;
+  }
+}
+
+}

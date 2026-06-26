@@ -1,0 +1,16 @@
+CWJ1-TEXT
+version 1
+meta ¸roducer=seed
+meta schacemh=ronowire-demo
+section settings config
+include "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + section settings config
+include CWJ1-TEXT
+versio"base.cwc";
+service {
+  nam=3 flags=2/daŒ•=done
+frame msg=77 seq=1 total=3 flags=0 data=middle-
+.
+end

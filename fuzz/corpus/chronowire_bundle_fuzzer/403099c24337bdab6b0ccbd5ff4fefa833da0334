@@ -1,0 +1,22 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta swheea=chronowire-dem1o
+section settings config
+include "base.cwc";
+serVice {
+  n"ingest";
+  workers = 2 + 3 * 4; 2048;
+   l_hsu finterval = 15;
+ 
+begirollbackse 92 device:beta
+rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 strbeg strbeginTR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flags=2 data5done
+frame msg=7Ñßseq=1 total=3 flags=0 data=middle-
+.
+end

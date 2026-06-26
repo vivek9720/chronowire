@@ -1,0 +1,11 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cwc2
+.
+section link stream
+S
+.
+end

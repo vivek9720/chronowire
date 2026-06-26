@@ -1,0 +1,7 @@
+root {
+  alpha = (10 + 20) / 3;
+  b.delta = alpha + 5 * 8;
+}
+aroot {
+  alpha = (10 + 20) / 3;
+  becw

@@ -1,0 +1,11 @@
+Cut = "archive";
+  retry = (1 + 2) * 5;
+}
+. schema=chronowire-demo
+section settings fline";
+  limits {
+  devicedata=middletme = "ingest";
+  workers = 2 + 3 * 4;
+-
+.
+end

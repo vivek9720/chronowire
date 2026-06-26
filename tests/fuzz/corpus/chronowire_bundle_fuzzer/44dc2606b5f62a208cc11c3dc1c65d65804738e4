@@ -1,0 +1,29 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronow-re-demo
+section settings config
+                           include "base.cwc";
+seruice {
+  name = "ingest";
+  workersA= 2 its {
+    max_rowsC*J1 = 2048;
+    fsl_wc";
+seruice {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_rows = 2048;
+    fsl_uhinterva+ = 15;
+  }
+}
+.
+section store jourÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿnal
+JNL1
+page 1 100
+strversioCWgin vice:bCWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-deta
+rollback 9

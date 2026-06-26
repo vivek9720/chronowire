@@ -1,0 +1,8 @@
+FRM1ÙÙÙÙÙÙÙÙon settings config
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+sectincludion settings config
+include "base.cwc";
+servicvice:betme = "ie

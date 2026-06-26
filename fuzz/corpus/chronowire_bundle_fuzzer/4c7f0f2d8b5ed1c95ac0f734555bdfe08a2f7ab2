@@ -1,0 +1,18 @@
+FRM1-TEXT
+version 1
+metÿ"a producer=(seed
+meta schema=chronow-re-de settings config
+include schema=wc";
+seruiservicece {
+  name = C³µÎÒ«"ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limzts {
+    max_rows = 2048;
+    fsl_uhinterva+ = 15;
+  }
+}
+.
+section store jourÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿs=0 data<middl
+-e.
+endÿÿÿÿÿÿÿÿ

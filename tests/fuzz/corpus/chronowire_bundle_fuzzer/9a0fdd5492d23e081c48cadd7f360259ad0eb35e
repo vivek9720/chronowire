@@ -1,0 +1,26 @@
+CWJ1-TEXT
+version 1
+meta producer=seedema=chronowire-demo
+section settings config
+inclu    flush_interval = 15;
+  }
+}
+.
+
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "base.cwc";
+service {
+  name =
+section settings config
+pipeline {
+  CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+sectioR1
+frame msg=9 seq=0 total=0 flags=4 data=single-message
+.
+end

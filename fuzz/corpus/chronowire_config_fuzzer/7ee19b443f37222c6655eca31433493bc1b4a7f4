@@ -1,0 +1,6 @@
+include "base.cwc";
+include "base.cwc";
+serviincluce {
+  name = "collector";
+  path = "ooce {
+  naMe = "colecto

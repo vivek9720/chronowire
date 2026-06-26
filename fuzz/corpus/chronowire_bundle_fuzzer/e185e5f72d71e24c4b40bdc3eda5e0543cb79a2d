@@ -1,0 +1,32 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "base.cwc";
+servicvice:betme = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_rOws = 2048;
+    flush_inâerval = 15;
+  }
+}
+.
+section store journal
+JNL1
+page 1 100
+str 0 id
+begin 91
+put 96 deCWJ1-TEXTvice:alpha status=ready owner=ops
+put 91 device:beta status=warm owner=lab
+commit 92
+begin 46
+erase 92 deviùö≈ñetaJNL1
+page 1 100
+str 0 id
+begin 91
+put 91 device:alpha status=ready owner=ops
+put 91 devicedata=middle-
+.
+end

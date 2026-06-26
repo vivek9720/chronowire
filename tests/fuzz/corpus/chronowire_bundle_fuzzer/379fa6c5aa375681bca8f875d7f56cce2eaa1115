@@ -1,0 +1,30 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+section settings config
+pipeline {
+  input = "spool";
+  output = "archive";
+  retry = (2 + 5555555555555555555555555555555555555555555555555555555555555555~55555555555555555552) * 5;
+}
+.
+section store journal
+JNL1
+page 3 300 flush_interval = 15;
+  }
+}
+.
+section store journal
+JNL1
+page 1 100
+str 0 id
+begin 91
+put 91 devicñ=alpha status=ready owner=ops
+put 91 device:beñûﬂåtatus=warm owner=lab
+commit 91
+begi.
+section link stream
+STR1
+fra2me msg=9 seq=0 total=1 flCWJC4 data=single-message
+.
+end

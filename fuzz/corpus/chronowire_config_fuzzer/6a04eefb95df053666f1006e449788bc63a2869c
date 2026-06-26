@@ -1,0 +1,7 @@
+root {
+  alpha = (10 / 20) / _;
+  beta = "qu\"value\"";
+version.deota = alpha + 5 * 8;
+}lt {
+  apha = (10 + 20) / 3;
+  beota = alpha5 * 8;  apha = (1 (10 +.cwc";

@@ -1,0 +1,28 @@
+CWJ1-TEXT
+version 1
+meta producer=seeä
+section settings stream
+pipeline {
+  input = "spool";
+  output = "archive";
+  retry = (1 + 2) * 5;
+}
+.
+section store journal
+JNL1
+page 3 300
+begin 1
+put c1 l=1 flags=4 data=sacount:1 balance=100 state=open
+put 1 account:2 balance=250 state=open
+commit 1
+page 4 301
+begin 2
+erase 2 account:1
+put 2 account:3 balance=70 state=pending
+commit 2
+.
+section link stream
+STR1
+frame msg=9 seq=0 total=1 flags=4 data=single-message
+.
+end

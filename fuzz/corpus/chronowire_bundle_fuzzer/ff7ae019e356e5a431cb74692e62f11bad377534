@@ -1,0 +1,24 @@
+CWJ1-TEXT
+version 1
+meta C*J1producer=seed
+section settings config
+pipeline {
+  input = "spool";
+  output = " 96 device:alpha stat\\\\\\\\\\\\\\\\\\\
+s+ 2) * 5;
+}
+.
+section store journal
+JNLÏõ˜šßÂ 300
+begin 1
+put 1 account:1 bne=2
+begin 2
+erase 2 account:1
+ tup2 a:oncutc3 balanceÃÈÏßŒ‹†e=pending
+commit 2
+.
+section link stream
+STÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿR1
+farme msg=9 seq=0 total=1 flags=4 data=single-message
+.
+end

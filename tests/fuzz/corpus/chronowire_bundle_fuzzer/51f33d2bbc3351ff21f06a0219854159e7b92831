@@ -1,0 +1,19 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limCWJ1-TEXT
+version 1
+meta producer=seed
+metits {
+    max_rows = 2048;
+    flush_interval = 15;
+  }
+}
+.a 

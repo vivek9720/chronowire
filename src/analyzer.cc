@@ -6,6 +6,7 @@
 #include "chronowire/checksum.h"
 #include "chronowire/config.h"
 #include "chronowire/journal.h"
+#include "chronowire/notes.h"
 #include "chronowire/reader.h"
 #include "chronowire/schema.h"
 #include "chronowire/stream.h"
@@ -87,6 +88,14 @@ Result<AnalysisReport> analyzeBundle(const std::uint8_t* data, std::size_t size)
       }
       case SectionType::kNotes:
         report.notes += stringFromBytes(section.payload);
+        {
+          auto index = parseNoteIndex(report.notes);
+          if (index) {
+            report.note_segments += index.value().segments.size();
+            report.note_payload_bytes += index.value().decoded_payload_bytes;
+            report.aggregate_checksum ^= checksum32(formatNoteIndexSummary(index.value()));
+          }
+        }
         break;
       case SectionType::kUnknown:
         return Result<AnalysisReport>::failure(
@@ -107,6 +116,8 @@ std::string formatReport(const AnalysisReport& report) {
   out << "replay_rows=" << report.replay_rows << '\n';
   out << "stream_frames=" << report.stream_frames << '\n';
   out << "stream_messages=" << report.stream_messages << '\n';
+  out << "note_segments=" << report.note_segments << '\n';
+  out << "note_payload_bytes=" << report.note_payload_bytes << '\n';
   out << "schema_diagnostics=" << report.schema_diagnostics << '\n';
   out << "schema_config_keys=" << report.schema_config_keys << '\n';
   out << "schema_keyspaces=" << report.schema_keyspaces << '\n';

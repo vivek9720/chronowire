@@ -1,0 +1,28 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta sea=chronowire-demo
+section settings config
+icnlude "basst";
+  workers = l = 15;
+  }
+}
+.
+section store journal
+JNL1
+page 1 100
+str 0 id
+begin 91
+put 91 device:alpha status=ready owner=ops
+put 45 device:beta status=warm owner=lab
+commit 91
+begin 92
+erase 92 device:beta
+rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flagstotal=3 flags=0 data=middle-
+.
+end

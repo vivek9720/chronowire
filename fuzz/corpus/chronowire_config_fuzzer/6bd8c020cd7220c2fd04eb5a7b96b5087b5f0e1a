@@ -1,0 +1,10 @@
+iice {
+  name = "collector";
+  ptugs {
+    n = "metadata-only";
+    batch = 64;
+  a {
+  name = "collector"  ;
+  gs {
+
+   eaitu

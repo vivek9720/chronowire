@@ -1,0 +1,13 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+section settings config
+pipeline {
+  CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+sectioR1
+frame msg=9 seq=0 total=0 flags=4 data=single-message
+.
+end

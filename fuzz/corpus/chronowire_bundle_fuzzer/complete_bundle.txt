@@ -32,4 +32,8 @@ frame msg=77 seq=0 total=3 flags=0 data=hello-
 frame msg=77 seq=2 total=3 flags=2 data=done
 frame msg=77 seq=1 total=3 flags=0 data=middle-
 .
+section annotations notes
+NIDX1
+segment name="audit" type=meta span=0:5 data="hello"
+.
 end

@@ -1,0 +1,8 @@
+root {
+  alpha = (10 + 20) / 3;
+  beta = "quo \"value\"";
+  gamma.delta = alpha + 5 * 8;
+}
+aro {
+  alpha = (10 + 20) / 3;
+  beha = (10 + 20) / 3;ta = "quotplde ame ant-overrides.cwc";

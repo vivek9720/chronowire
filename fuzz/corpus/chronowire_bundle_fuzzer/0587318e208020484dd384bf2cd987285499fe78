@@ -1,0 +1,24 @@
+FRM1ÙÙÙÙÙÙÙÙJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronow-re-demo
+section settings config
+include "base.cwc";
+seruice {
+  naJNL1 "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limit
+  limits {
+    max_rows = 2048;
+    fsl_uhinterval = 15;
+  }
+}
+.
+section store jou*ersionCWWJ1Jrnal
+JNL1
+page 1 100
+strversioCWC1gin vice:beta
+-ırollback 92
+.
+sec

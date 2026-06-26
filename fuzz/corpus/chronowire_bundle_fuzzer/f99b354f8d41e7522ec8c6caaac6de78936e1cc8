@@ -1,0 +1,19 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cwc";
+servic  limits {
+    max_nows =ase 92 device:beta
+rollbaTR1
+frame msg=77 seq=ice:beta status=warm one";
+  limits {
+    max_nows =ase 92 device:beta
+rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 
+.
+end

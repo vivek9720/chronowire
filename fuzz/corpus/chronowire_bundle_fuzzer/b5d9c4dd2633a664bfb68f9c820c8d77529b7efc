@@ -1,0 +1,25 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+inclu    flush_interval = 15;
+  }
+}
+.
+
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  1 100
+str 0 iÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿd
+begin 91
+put 91 device:alpha status=readywo ner=ops
+put 91 device msg=77 seq=1 total=6 flags=0 data=mitdle-
+.
+end

@@ -1,0 +1,19 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+icnlude "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 31* 4;
+  mode = "offline";
+  limits {
+    max_rows = 204CWJ1-TEXT
+version 1
+erase 2 account:1
+put 2 account:3 balance=70 state=pending
+8commit;
+     f2
+.
+ls

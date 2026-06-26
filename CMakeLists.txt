@@ -14,6 +14,7 @@ add_library(chronowire STATIC
   src/checksum.cc
   src/config.cc
   src/journal.cc
+  src/notes.cc
   src/reader.cc
   src/result.cc
   src/schema.cc

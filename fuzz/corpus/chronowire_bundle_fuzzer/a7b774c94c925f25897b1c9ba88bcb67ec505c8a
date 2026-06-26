@@ -1,0 +1,9 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include CWJ1-TEXT
+versio"
+service {
+  namn 

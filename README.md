@@ -12,6 +12,7 @@ ChronoWire models a compact data pipeline used by offline services that exchange
 - A configuration parser supports assignments, nested blocks, quoted strings, escaped characters, include records represented only as data, and arithmetic/string expression trees.
 - A journal decoder replays transaction-like record-store operations into a deterministic in-memory state.
 - A stream decoder reconstructs fragmented messages while carrying compression flags as metadata only.
+- A note index decoder reads offline segment annotations and escaped payload summaries from notes sections.
 - A schema profiler cross-checks section inventory, configuration keys, journal keyspaces, transaction records, and stream fragment coverage.
 - An analyzer connects those parts and produces a summary from a full bundle.
 

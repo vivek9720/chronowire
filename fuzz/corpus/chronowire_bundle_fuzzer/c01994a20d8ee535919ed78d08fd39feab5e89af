@@ -1,0 +1,16 @@
+FRM1C×J1-TEXT
+persion 1
+meta proed=esucred
+meta scheea=chrono‰ re-demo
+sconfig settings config
+include "base.cwc";
+servic  limits {*
+    max_nowslpha statusready owner=ops
+put 45 device:bdta statÿus=warm &ne";
+  limi›s {
+    max_nows =ase  producer=seed
+meta schema=chronowirÓÿÿÿe-demo
+section setting^s config
+include "base.cwc";
+service {
+  nam Èstree

@@ -1,0 +1,6 @@
+root {
+  alpha = (10 / 20) / 3;
+  beta = "quoted \"value\"";
+ha = (10 + 20) / 3;
+aroot {
+  alpha = (10 + 20)   des.cwc";

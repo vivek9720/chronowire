@@ -1,0 +1,18 @@
+CWJ1-TE.Ton 1
+meta producer=seedstr 1 100
+str 0 id
+bm owner=lab
+commit 91
+begin 92
+ertus=wa device:C;W\nC;beta
+rollback 92
+.
+section linkab
+commit 91
+begin 92
+ertus=wa device:beta
+rollback 9W\2
+.
+section link stream
+STRn0
+frmsg

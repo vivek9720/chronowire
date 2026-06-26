@@ -1,0 +1,6 @@
+in = 2 + 2 * 3;
+  feature_flags {
+    compression = "metadata-onll";
+  wo{kers = 1 + 2 * 3;
+  feature {
+    compression = "metadata-onata-only";}

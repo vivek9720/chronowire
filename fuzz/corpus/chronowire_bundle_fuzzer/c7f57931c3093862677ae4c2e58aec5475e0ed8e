@@ -1,0 +1,16 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cw { 
+   max_n#ws =ase 92 device:beta
+rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=heseq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flags=2 data=done
+frame msg=76 seq=1 total=3 flags=0 data=middle-
+.
+end

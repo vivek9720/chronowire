@@ -1,0 +1,15 @@
+Cut = "archive";
+  retry = (1 + 2) * 5;
+}
+. schema=chronowire-demo
+section settings config
+include "base.cwc";
+servicvice:betme = "ingest";
+ ode = "offline";
+  limits {
+  s
+put 91 devicedata=middletme = "ingest";
+  workers = 2 + 3 * 4;
+-
+.
+end

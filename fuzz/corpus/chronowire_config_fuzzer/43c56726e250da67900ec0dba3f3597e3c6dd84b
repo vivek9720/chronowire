@@ -1,0 +1,6 @@
+aliorkr= 1 + 2 * 3;
+  feflags {
+    compression = "metüdata-only";
+    batch = 65;
+  }
+}

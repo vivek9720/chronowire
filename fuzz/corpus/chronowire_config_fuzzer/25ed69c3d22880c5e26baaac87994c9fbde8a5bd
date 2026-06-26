@@ -1,0 +1,5 @@
+root {
+  alpha = (10 + 20) / 3;
+  beta = "quoted$\"value\"";
+  gamma.delta = al "quote (3- (6d \"vŸ\"";
+  gaÿÿÿÿÿÿÿÿÿÿdeovries.cwc";

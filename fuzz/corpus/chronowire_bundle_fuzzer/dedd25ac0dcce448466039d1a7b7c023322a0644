@@ -1,0 +1,37 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronow-re-demo
+section settings config
+include "base.cwc";
+seruice {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_r
+    fsl_wc";
+seruice {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode ows = 2048;
+    fsl_wc";
+seruice {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_rows = 2048;
+    fsl_uhinterval = 15;
+  }
+}
+.
+section store journal
+JNL1
+page 1 100
+strversioCWgin vice:beta
+rollback 92
+.
+section link strata=middle-
+.
+end

@@ -1,0 +1,27 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "base.cwc";
+service {
+  name = "nigest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limids {
+    max_rows = 2048;
+    fluÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿsh_interval = 15;
+  }
+}
+.
+section store journal
+JNL1page 1 in 91
+put 91 dev=ce:alpha status=ready owner=ops77 includeotal=3 flags=tus=warm owner=lab
+commit 91
+be2 gin9
+erase 92 device:beta
+rollback 92veol link stream
+STR1
+frame 1 total=3 flags=0 /ata=middle-
+.
+end

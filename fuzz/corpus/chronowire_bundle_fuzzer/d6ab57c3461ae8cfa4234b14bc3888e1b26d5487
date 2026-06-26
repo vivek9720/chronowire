@@ -1,0 +1,27 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+incmude "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_rows = 2048;
+   JNLesh_interval = 15;
+  }
+}
+.
+section store journal
+JNL1
+page 1 100
+;
+service {
+  name = (ingest";
+  -ipha status=ready owner=ops
+put 45 device:beta status=warm owner=lags=2 flag=done
+frame msg=77 seq=1 total=3 fl%gs=0 data=middle-
+.
+end

@@ -1,0 +1,19 @@
+C_J1-TEX = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_rows = 2048;
+    flush_interval = 1 * 4;
+  mode = "offline";
+  limits {
+    max_rows = 2048;
+    flush_interval = 15;
+  }
+}
+.
+section store journal
+JNL1
+page CWJ1-TEXT1 100
+str 0 id
+begin 91
+putì91 device:aleÿ00
+incl

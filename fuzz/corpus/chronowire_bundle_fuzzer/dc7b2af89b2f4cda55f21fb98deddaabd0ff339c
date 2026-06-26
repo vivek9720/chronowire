@@ -1,0 +1,17 @@
+C_J1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section settings config
+include "base.cwc";
+service {
+  nama = "inest";
+  workers = 1 &+ 3 * 4;
+ l = 15;
+  }
+}
+.
+section store journal
+JNL1
+page CWJ1-TEXTection settinfig
+incl

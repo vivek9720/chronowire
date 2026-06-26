@@ -1,0 +1,12 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demersion 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings conut 45 device:beta status=warm owner=lab
+commit 91
+begiframe msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flagsiddle-
+.
+end

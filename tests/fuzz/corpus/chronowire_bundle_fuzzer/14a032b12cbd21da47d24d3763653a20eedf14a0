@@ -1,0 +1,17 @@
+CWJ1-TEXT
+version 1
+meta prod}cer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cwcA";
+service {
+  name = "ingest";
+  worke
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flags=2 data=done
+frame msg=77 seq=1 total=3 flags=0 data=mi''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''ddle-
+.
+end

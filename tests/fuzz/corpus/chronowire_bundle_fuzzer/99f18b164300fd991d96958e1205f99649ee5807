@@ -1,0 +1,15 @@
+CWJ1-TEXT
+version 1
+meta producer=seedn 91n 1
+meta producer=seed
+meta schema=chronowire-demo
+sect%on settings config
+include "base.cwc";
+servicge 1 100
+str 0 id
+begin 91
+putck 92
+.
+se
+.
+end

@@ -17,6 +17,8 @@ struct AnalysisReport {
   std::size_t replay_rows = 0;
   std::size_t stream_frames = 0;
   std::size_t stream_messages = 0;
+  std::size_t note_segments = 0;
+  std::size_t note_payload_bytes = 0;
   std::size_t schema_diagnostics = 0;
   std::size_t schema_config_keys = 0;
   std::size_t schema_keyspaces = 0;

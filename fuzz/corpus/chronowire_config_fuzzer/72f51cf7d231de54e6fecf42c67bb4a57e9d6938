@@ -1,0 +1,9 @@
+root {
+  alpha = (10 + 20) / 3;
+  beta = "quoted \"value\"";
+  gamma.delta = alpha + 5 * 8;
+}
+aroot {
+  rt= (10 + 20) / 3;
+  betalpha = (10 + 20) / 3;a
+  beta =0+qu = o

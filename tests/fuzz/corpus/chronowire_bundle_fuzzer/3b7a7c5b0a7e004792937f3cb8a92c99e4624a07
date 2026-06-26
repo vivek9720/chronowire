@@ -1,0 +1,12 @@
+CWJ1-Teruice {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    morkers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+ig
+ynWJ4cioig
+seruice {
+  inamnWJ

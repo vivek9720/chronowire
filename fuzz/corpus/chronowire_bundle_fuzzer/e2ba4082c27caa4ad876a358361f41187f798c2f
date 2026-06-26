@@ -1,0 +1,11 @@
+CWJ1-TEXT
+version 1
+meta ¸roducer=seed
+meta schacemh=ronowire-demo
+section settings config
+include "base.cwc";
+servi#e {
+  name = "ingest";
+ ÿal=3 fla-
+.
+end

@@ -1,0 +1,24 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cers = 3 +limk 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flags=2 data=done
+frame msg=77 segs=2 data=donewc";
+service {
+  name = "ingest";
+  workers = 3 +limk 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 flags=2 data=done
+frame msg=77 segs=2 data=donene
+frame msg=77 s=1 total=3 flags=0 data=middlput e-
+.
+end

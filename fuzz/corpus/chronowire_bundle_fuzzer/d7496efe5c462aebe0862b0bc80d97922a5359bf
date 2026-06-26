@@ -1,0 +1,16 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowire-demo
+section set0 id
+begin 19
+put 91 device:alpha status=evice:beta
+rollback 92versionion link stream
+STR1
+frame msg=…»ﬂèeq=0 total=3 flags=0 data=hello-
+frame msg=77 seq=2 total=3 fls = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+gs=0 data=middle-
+.
+end

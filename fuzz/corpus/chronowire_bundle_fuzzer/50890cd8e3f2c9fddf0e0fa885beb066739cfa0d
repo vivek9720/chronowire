@@ -1,0 +1,28 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+icnlude "base.cwc";
+service {
+  name = "ingest";
+  workersta producer=seed
+meta scheea=chronowire-demo
+section settings config
+icnlude "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 31* 4;
+  mode = "mffline";
+  limits {
+    max_rows = 2048;
+    flush_interva
+  }
+}
+.
+section store journal
+JNL1
+page 1 100
+str 0 iiddle-
+.
+end

@@ -7,6 +7,7 @@
 #include "chronowire/archive.h"
 #include "chronowire/config.h"
 #include "chronowire/journal.h"
+#include "chronowire/notes.h"
 #include "chronowire/reader.h"
 #include "chronowire/schema.h"
 #include "chronowire/stream.h"
@@ -41,6 +42,10 @@ section link stream
 STR1
 frame msg=11 seq=1 total=2 flags=1 data=world
 frame msg=11 seq=0 total=2 flags=0 data=hello
+.
+section annotations notes
+NIDX1
+segment name="audit" type=meta span=0:5 data="hello"
 .
 end
 )";
@@ -95,16 +100,28 @@ void testBundleAnalysis() {
   auto report = chronowire::analyzeBundle(reinterpret_cast<const std::uint8_t*>(text.data()),
                                           text.size());
   assert(report);
-  assert(report.value().section_count == 3);
+  assert(report.value().section_count == 4);
   assert(report.value().include_records == 1);
   assert(report.value().journal_pages == 1);
   assert(report.value().journal_records == 7);
   assert(report.value().replay_rows == 2);
   assert(report.value().stream_frames == 2);
   assert(report.value().stream_messages == 1);
+  assert(report.value().note_segments == 1);
+  assert(report.value().note_payload_bytes == 5);
   assert(report.value().schema_config_keys >= 4);
   assert(report.value().schema_keyspaces == 1);
   assert(report.value().schema_signature != 0);
+}
+
+void testNoteIndex() {
+  auto parsed = chronowire::parseNoteIndex(
+      "NIDX1\nsegment name=\"one\" type=meta span=4:3 data=\"a\\x62c\"\n");
+  assert(parsed);
+  assert(parsed.value().segments.size() == 1);
+  assert(parsed.value().decoded_payload_bytes == 3);
+  assert(chronowire::formatNoteIndexSummary(parsed.value()).find("note_segments=1") !=
+         std::string::npos);
 }
 
 void testSchemaProfile() {
@@ -112,7 +129,7 @@ void testSchemaProfile() {
   auto profile = chronowire::profileBundleBytes(
       reinterpret_cast<const std::uint8_t*>(text.data()), text.size());
   assert(profile);
-  assert(profile.value().sections.size() == 3);
+  assert(profile.value().sections.size() == 4);
   assert(profile.value().keyspaces.count("user") == 1);
   assert(profile.value().stream.reconstructed_messages == 1);
   assert(profile.value().begin_records == 2);
@@ -130,6 +147,7 @@ int main() {
   testConfig();
   testJournalReplay();
   testStream();
+  testNoteIndex();
   testBundleAnalysis();
   testSchemaProfile();
   return 0;

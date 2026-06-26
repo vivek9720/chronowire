@@ -1,0 +1,15 @@
+root {
+  alpha = (10 + 20) / 3;
+  beta = "quo \"value\"";
+  gamma.delta = alpha + 5 * 8;
+}
+aro {
+  alpha = (10 + 20) / 3;
+  beta = "quotplde ame ant-overproducer=";
+ot {
+  alpha = (10 + 20) / 3;
+  beta = "quo \"value\"";
+  gamma.delta = alpha + 5 * 8;
+}
+aro {
+  alpha = (10 + 20) /

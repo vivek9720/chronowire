@@ -1,0 +1,17 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+section settings config
+pipeline {
+  input = "spool";
+  output = "archive";
+  retry = (1 + 2) * 5;
+}
+.
+section store journal
+JNL1
+page 3 300
+begin 1
+put 1 acl=1 flags=4 data=single-message
+.
+end

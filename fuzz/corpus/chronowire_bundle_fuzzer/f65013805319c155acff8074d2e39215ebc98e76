@@ -1,0 +1,17 @@
+CWJ1-TEXe "base.cwbeta status=warm one";
+  limits {
+    max_nows =ase 92 device:beta
+rollback 92
+.
+sectioc";
+service vice:beta
+rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello*
+frame msg=76 ‹ 2s5 device:beta stat{
+/a=done
+frame msg=77 seq=1 total=3 flags=0 data=middle-
+.
+end

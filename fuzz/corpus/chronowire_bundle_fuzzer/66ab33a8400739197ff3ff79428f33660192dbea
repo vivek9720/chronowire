@@ -1,0 +1,13 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base/cwc";
+service {
+  name = "ingest";
+  workers = 3 +liyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyymkmsg=77 s1
+meta producer=seed
+eq=0 totalags=0 data=middle-
+.
+end

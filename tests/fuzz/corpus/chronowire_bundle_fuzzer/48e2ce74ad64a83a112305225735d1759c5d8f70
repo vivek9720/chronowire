@@ -1,0 +1,9 @@
+CWJ1-Teruice {
+  name = "ingest";
+  workers = 2 + 3 * 4;
+  mode = "offline";
+  limits {
+    max_r
+    fsl_wCWJ1-TEXT
+vcäÄõšrsion {
+  inamnWJ

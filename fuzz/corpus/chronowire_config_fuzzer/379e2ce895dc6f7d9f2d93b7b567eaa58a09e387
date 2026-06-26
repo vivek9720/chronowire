@@ -1,0 +1,12 @@
+include "base.cwc";
+service {
+  name = "collector";
+  path = "clector";
+  path = "spool/queue";
+name = "collector";
+  path = "clector";
+   workers = 0 + 2 * 3;
+  featurion = "metadata-only";
+    batch = 64;
+  }
+}

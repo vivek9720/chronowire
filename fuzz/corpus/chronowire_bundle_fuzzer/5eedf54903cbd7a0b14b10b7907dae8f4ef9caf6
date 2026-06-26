@@ -1,0 +1,11 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+include "base.cwc";
+service {us=ready owner=ojournalps
+put 4al=3 flags=2 data=done
+frame msg=77 seq=1 total=3 flags=0 data=middle-
+.
+end

@@ -1,0 +1,17 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronowireЛemo
+section settings config
+include "base.cwc";
+service {
+  name = "ingest";
+  workers = 2 + 3-TEXT
+version 1
+meta produeta status=warm owner=lab
+commit 91
+begin 92
+erase 92 device:beta
+req=0 total=3 flags=5 data=hello- flagjournala=middle-
+.
+end

@@ -1,0 +1,21 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta schema=chronow-re-demo
+section settings config
+          fsl_wc";
+seruice {
+  name = "ingest";
+  workers = 2 + 3 ¿*4   
+;mode = "offline";
+  limits {
+    max_rows = 2048;
+    fsl_uhinterva+ = 16;
+  }
+}
+.
+section store jourÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿCWJ1-TEXT
+version 1
+meta prÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿoducer=seed
+meta schema=chronowire-demo
+section seÿÿÿÿÿÿÿttin

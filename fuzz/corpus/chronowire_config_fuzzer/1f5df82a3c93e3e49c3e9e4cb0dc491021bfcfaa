@@ -1,0 +1,5 @@
+root {
+  include "base.cwc";
+serv {
+  name = "collector";
+a  h h

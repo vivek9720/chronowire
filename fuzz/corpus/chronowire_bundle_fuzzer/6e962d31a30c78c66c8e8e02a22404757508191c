@@ -1,0 +1,16 @@
+CWJ1-TEXT
+version 1
+meta producer=seed
+meta scheea=chronowire-demo
+section settings config
+indevice:beta status=warm one";
+  limits {
+    max_nows =ase 92 device:beta!rollback 92
+.
+section link stream
+STR1
+frame msg=77 seq=0 total=3 flags=0 data=hello-
+framems g=77 q 2s=etotal=3 flags=2 
+frame msg=77 seq=1 total=3 flags=0 data=middle-
+.
+end

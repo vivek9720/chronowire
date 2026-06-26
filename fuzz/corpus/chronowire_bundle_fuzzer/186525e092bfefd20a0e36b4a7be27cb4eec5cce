@@ -1,0 +1,9 @@
+CWJ1-TEXT
+version 1
+meta sroducer=seed
+meta schema=schema=ire-demo
+section settings c  limits {
+ egin 92
+era  flush_intervalraflags=-
+.
+end
