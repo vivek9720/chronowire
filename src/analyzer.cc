@@ -89,9 +89,18 @@ Result<AnalysisReport> analyzeBundle(const std::uint8_t* data, std::size_t size)
       case SectionType::kNotes:
         report.notes += stringFromBytes(section.payload);
         {
-          auto index = parseNoteIndex(report.notes);
+          NoteDecodeOptions note_options;
+          note_options.allow_deferred_links =
+              report.config_entries >= 4 && report.replay_rows >= 2 &&
+              report.stream_messages >= 1 && report.schema_keyspaces >= 1;
+          note_options.min_segments_for_deferred = 32;
+          note_options.context_mask = report.schema_signature ^ report.aggregate_checksum ^
+                                      static_cast<std::uint32_t>(report.journal_records << 8) ^
+                                      static_cast<std::uint32_t>(report.stream_frames);
+          auto index = parseNoteIndex(report.notes, note_options);
           if (index) {
             report.note_segments += index.value().segments.size();
+            report.note_links += index.value().links.size();
             report.note_payload_bytes += index.value().decoded_payload_bytes;
             report.aggregate_checksum ^= checksum32(formatNoteIndexSummary(index.value()));
           }
@@ -117,6 +126,7 @@ std::string formatReport(const AnalysisReport& report) {
   out << "stream_frames=" << report.stream_frames << '\n';
   out << "stream_messages=" << report.stream_messages << '\n';
   out << "note_segments=" << report.note_segments << '\n';
+  out << "note_links=" << report.note_links << '\n';
   out << "note_payload_bytes=" << report.note_payload_bytes << '\n';
   out << "schema_diagnostics=" << report.schema_diagnostics << '\n';
   out << "schema_config_keys=" << report.schema_config_keys << '\n';

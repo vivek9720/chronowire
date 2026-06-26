@@ -108,6 +108,7 @@ void testBundleAnalysis() {
   assert(report.value().stream_frames == 2);
   assert(report.value().stream_messages == 1);
   assert(report.value().note_segments == 1);
+  assert(report.value().note_links == 0);
   assert(report.value().note_payload_bytes == 5);
   assert(report.value().schema_config_keys >= 4);
   assert(report.value().schema_keyspaces == 1);
@@ -119,9 +120,23 @@ void testNoteIndex() {
       "NIDX1\nsegment name=\"one\" type=meta span=4:3 data=\"a\\x62c\"\n");
   assert(parsed);
   assert(parsed.value().segments.size() == 1);
+  assert(parsed.value().links.empty());
   assert(parsed.value().decoded_payload_bytes == 3);
   assert(chronowire::formatNoteIndexSummary(parsed.value()).find("note_segments=1") !=
          std::string::npos);
+
+  chronowire::NoteDecodeOptions options;
+  options.allow_deferred_links = true;
+  options.min_segments_for_deferred = 2;
+  options.context_mask = 0x1234;
+  auto linked = chronowire::parseNoteIndex(
+      "NIDX1\n"
+      "segment name=\"one\" type=meta span=4:3 data=\"abc\"\n"
+      "segment name=\"two\" type=meta span=8:3 data=\"def\"\n"
+      "link source=\"two\" target=\"one\" mode=deferred weight=7\n",
+      options);
+  assert(linked);
+  assert(linked.value().links.size() == 1);
 }
 
 void testSchemaProfile() {
