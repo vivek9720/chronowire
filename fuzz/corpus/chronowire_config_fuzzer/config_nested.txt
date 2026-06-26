@@ -1,0 +1,10 @@
+include "base.cwc";
+service {
+  name = "collector";
+  path = "spool/queue";
+  workers = 1 + 2 * 3;
+  feature_flags {
+    compression = "metadata-only";
+    batch = 64;
+  }
+}

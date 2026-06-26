@@ -1,0 +1,6 @@
+root {
+  alpha = (10 + 20) / 3;
+  beta = "quoted \"value\"";
+  gamma.delta = alpha + 5 * 8;
+}
+include "tenant-overrides.cwc";
