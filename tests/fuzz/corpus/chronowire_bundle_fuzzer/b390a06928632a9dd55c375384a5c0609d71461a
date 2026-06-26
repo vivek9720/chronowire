@@ -1,5 +1,0 @@
-
-  name = "ingest";
-  workers = 3 +limits {
-    max_nows = 2gs=2 data=done
-und

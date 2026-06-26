@@ -1,3 +1,0 @@
-fuzz_targets:
-  - chronowire_bundle_fuzzer
-  - chronowire_config_fuzzer
